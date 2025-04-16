@@ -14,6 +14,9 @@ into the {body} tag of the default.hbs template --}}
         <header class="article-header gh-canvas">
 
             <h1 class="article-title">{{title}}</h1>
+            {{#if custom_excerpt}}
+                <p class="article-excerpt">{{custom_excerpt}}</p>
+            {{/if}}
 
             {{#if feature_image}}
                 <figure class="article-image">
