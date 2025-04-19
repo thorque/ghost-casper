@@ -58,7 +58,39 @@ production stylesheet in assets/built/screen.css
     --font-sans: 'Noto Sans';
     --font-serif: 'Noto Serif';
     --font-mono: Menlo, Courier, monospace;
+}
 
+#cc-main {
+    --cc-font-family: var(--font-sans);
+    --cc-btn-primary-bg: var(--ghost-accent-color);
+    --cc-btn-primary-border-color: var(--ghost-accent-color);
+    --cc-btn-primary-color: #fff;
+    --cc-btn-primary-hover-bg: #FF1A75e6;
+    --cc-btn-primary-hover-border-color: #FF1A75e6;
+    --cc-btn-primary-hover-color: #fff;
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+}
+
+.site-content a {
+    text-decoration: none !important;
+    color: var(--ghost-accent-color) !important;
+    position: relative;
+    display: inline-block;
+}
+
+.site-content a::after, .site-footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+  
+.site-content a:hover::after, .site-footer a:hover::after {
+    width: 100%;
 }
 
 
