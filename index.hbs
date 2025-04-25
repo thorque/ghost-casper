@@ -25,6 +25,7 @@ into the {body} of the default.hbs template --}}
             {{#match @custom.navigation_layout "Logo on cover"}}
                 {{#if @site.logo}}
                     <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                    <h1 class="site-title">{{@site.title}}</h1>
                 {{else}}
                     <h1 class="site-title">{{@site.title}}</h1>
                 {{/if}}
