@@ -32,16 +32,16 @@ CookieConsent.run({
                   title: 'Ich verwende Cookies',
                   description: 'Cookies werden nur für die Funktionalität der Website verwendet. Ich verwende keine Cookies, um dein Verhalten zu verfolgen oder deine Daten zu verkaufen.',
                   acceptAllBtn: 'Alle akzeptieren',
-                  acceptNecessaryBtn: 'Alle ablehnen',
+                  acceptNecessaryBtn: 'Nur Notwendige',
                   showPreferencesBtn: 'Einstellungen anzeigen',
                   closeIconLabel: 'Schließen'
               },
               preferencesModal: {
                   title: 'Manage cookie preferences',
-                  acceptAllBtn: 'Accept all',
-                  acceptNecessaryBtn: 'Reject all',
-                  savePreferencesBtn: 'Accept current selection',
-                  closeIconLabel: 'Close modal',
+                  acceptAllBtn: 'Alle akzeptieren',
+                  acceptNecessaryBtn: 'Nicht Notwendige Cookies ablehnen',
+                  savePreferencesBtn: 'Einstellungen speichern',
+                  closeIconLabel: 'Schließen',
                   sections: [
                       {
                           title: 'Sagte jemand ... Kekse?',

@@ -71,14 +71,14 @@ production stylesheet in assets/built/screen.css
     --cc-toggle-on-bg: var(--cc-btn-primary-bg);
 }
 
-.site-content a {
+.gh-content a, .article-header a {
     text-decoration: none !important;
     color: var(--ghost-accent-color) !important;
     position: relative;
     display: inline-block;
 }
 
-.site-content a::after, .site-footer a::after {
+.gh-content a::after, .site-footer a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -89,7 +89,7 @@ production stylesheet in assets/built/screen.css
     transition: width 0.3s ease;
 }
   
-.site-content a:hover::after, .site-footer a:hover::after {
+.gh-content a:hover::after, .site-footer a:hover::after {
     width: 100%;
 }
 
@@ -211,7 +211,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-header-content.left-aligned .site-title {
-    font-size: 4.4rem;
+    font-size: 3.4rem;
 }
 
 .has-cover .site-header-content.left-aligned .site-title {
@@ -1174,7 +1174,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-large .post-card-title {
         margin-top: 0;
-        font-size: 4.4rem;
+        font-size: 3.4rem;
         line-height: 1.05;
     }
 
