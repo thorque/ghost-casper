@@ -13,6 +13,7 @@
     },
     "scripts": {
         "dev": "gulp",
+        "build": "yarn pretest && cd ../ghost && ghost restart && cd ../ghost-casper",
         "zip": "gulp zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
@@ -43,7 +44,7 @@
         "url": "https://github.com/TryGhost/Casper.git"
     },
     "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "contributors": ["https://github.com/TryGhost/Casper/graphs/contributors"],
     "devDependencies": {
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.7",
@@ -101,18 +102,20 @@
             "title_font": {
                 "type": "select",
                 "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
+                    "Noto Serif",
+                    "Noto Sans",
+                    "Roboto"
                 ],
-                "default": "Modern sans-serif"
+                "default": "Noto Serif"
             },
             "body_font": {
                 "type": "select",
                 "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
+                    "Noto Serif",
+                    "Noto Sans",
+                    "Roboto"
                 ],
-                "default": "Elegant serif"
+                "default": "Noto Sans"
             },
             "show_publication_cover": {
                 "type": "boolean",
@@ -168,6 +171,46 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "hub_feature_image": {
+                "type": "image",
+                "description": "Upload an image for the hub page. If empty it will use the publication cover image.",
+                "group": "homepage"
+            },
+            "bluesky_profile": {
+                "type": "text",
+                "description": "Enter your Bluesky profile URL for the hub page",
+                "group": "homepage"
+            },
+            "facebook_profile": {
+                "type": "text",
+                "description": "Enter your Facebook profile URL for the hub page",
+                "group": "homepage"
+            },
+            "instagram_profile": {
+                "type": "text",
+                "description": "Enter your Instagram profile URL for the hub page",
+                "group": "homepage"
+            },
+            "mastodon_profile": {
+                "type": "text",
+                "description": "Enter your Mastodon profile URL for the hub page",
+                "group": "homepage"
+            },
+            "medium_profile": {
+                "type": "text",
+                "description": "Enter your Medium profile URL for the hub page",
+                "group": "homepage"
+            },
+            "tiktok_profile": {
+                "type": "text",
+                "description": "Enter your TikTok profile URL for the hub page",
+                "group": "homepage"
+            },
+            "x_profile": {
+                "type": "text",
+                "description": "Enter your X profile URL for the hub page",
+                "group": "homepage"
             }
         }
     },

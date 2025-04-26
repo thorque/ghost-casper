@@ -1,0 +1,124 @@
+/* Hub-Seite Styling */
+
+.gh-hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 0;
+}
+
+.gh-hub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 0 20px;
+}
+
+/* Wenn kein Bild vorhanden ist */
+.gh-hub-header.no-image .gh-hub-header-content {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.gh-hub-header-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 20px;
+}
+
+.gh-hub-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+  display: block; /* Wichtig für die Zentrierung */
+}
+
+.gh-hub-title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gh-hub-description {
+  font-size: 1.8rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.gh-hub-header-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.gh-hub-header-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.gh-hub-latest-posts{
+  margin-bottom: 120px;
+}
+
+.gh-hub-latest-posts.outer{
+  padding: 0 !important;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 980px) {
+  .gh-hub-header {
+      flex-direction: column-reverse;
+      padding: 40px 0;
+      gap: 30px;
+  }
+  
+  .gh-hub-header-content,
+  .gh-hub-header-image {
+      width: 100%;
+  }
+  
+  .gh-hub-logo {
+      margin-left: auto; /* Diese beiden Zeilen sorgen */
+      margin-right: auto; /* für die Zentrierung des Logos */
+  }
+  
+  .gh-hub-title {
+      font-size: 2.8rem;
+      text-align: center;
+  }
+  
+  .gh-hub-description {
+      font-size: 1.6rem;
+      text-align: center;
+  }
+  
+  .gh-hub-header-image img {
+      max-height: 300px;
+      object-position: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .gh-hub-header {
+      padding: 30px 0;
+      gap: 20px;
+  }
+
+  .gh-hub-header-content {
+    text-align: center;  
+  }
+  
+  .gh-hub-title {
+      font-size: 3.4rem;
+  }
+  
+  .gh-hub-description {
+      font-size: 1.4rem;
+  }
+  
+  .gh-hub-header-image img {
+      max-height: 200px;
+  }
+}

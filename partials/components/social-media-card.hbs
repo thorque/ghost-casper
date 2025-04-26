@@ -1,0 +1,80 @@
+{{!-- This is a partial file used to generate a social media "card" to show the configured social media profiles. --}}
+
+<div class="gh-hub-social-links">
+  {{#if @custom.instagram_profile}}
+    <a href="{{@custom.instagram_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon instagram">
+        <div class="social-icon-letter">IG</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">Instagram</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.bluesky_profile}}
+    <a href="{{@custom.bluesky_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon bluesky">
+        <div class="social-icon-letter">BS</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">Bluesky</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.mastodon_profile}}
+    <a href="{{@custom.mastodon_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon mastodon">
+        <div class="social-icon-letter">M</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">Mastodon</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.medium_profile}}
+    <a href="{{@custom.medium_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon medium">
+        <div class="social-icon-letter">M</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">Medium</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.facebook_profile}}
+    <a href="{{@custom.facebook_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon facebook">
+        <div class="social-icon-letter">FB</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">Facebook</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.tiktok_profile}}
+    <a href="{{@custom.tiktok_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon tiktok">
+        <div class="social-icon-letter">TT</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">TikTok</div>
+      </div>
+    </a>
+  {{/if}}
+  
+  {{#if @custom.x_profile}}
+    <a href="{{@custom.x_profile}}" target="_blank" rel="noopener" class="social-card">
+      <div class="social-card-icon twitter">
+        <div class="social-icon-letter">X</div>
+      </div>
+      <div class="social-card-content">
+        <div class="social-card-title">X/Twitter</div>
+      </div>
+    </a>
+  {{/if}}
+</div>
