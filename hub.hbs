@@ -1,6 +1,5 @@
 {{!< default}}
 
-{{#contentFor "is_hub"}}Hello World{{/contentFor}}
 <main id="site-main" class="site-main outer">
   <div class="gh-hub-container">
     <section class="gh-hub-header">
@@ -8,8 +7,9 @@
         {{#if @site.logo}}
           <img class="gh-hub-logo" src="{{@site.logo}}" alt="{{@site.title}}">
         {{/if}}
-        <h1 class="gh-hub-title">{{@site.title}}</h1>
-        <p class="gh-hub-description">{{@site.description}}</p>
+        <h1 class="gh-hub-title article-title">{{@site.title}}</h1>
+        <p class="gh-hub-description article-excerpt">{{@site.description}}</p>
+        {{> "components/social-media-card"}}
       </div>
       {{#has any="@custom.hub_feature_image, @site.cover_image"}}
         <div class="gh-hub-header-image">
@@ -35,16 +35,21 @@
         </div>
       {{/has}}
     </section>
-    {{> "components/social-media-card"}}
     {{#get "posts"  limit="6" as |more_posts|}}
       {{#if more_posts}}
         <aside class="read-more-wrap outer gh-hub-latest-posts">
-          <h2>Latest Posts</h2>
-            <div class="read-more inner">
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            </div>
+          <h2 class="gh-hub-section-title">
+            {{#if @custom.title_for_recent_posts}}
+              {{@custom.title_for_recent_posts}}
+            {{else}}
+              Recent posts
+            {{/if}}
+           </h2>
+          <div class="read-more inner">
+            {{#foreach more_posts}}
+              {{> "post-card"}}
+            {{/foreach}}
+          </div>
         </aside>
       {{/if}}
     {{/get}}

@@ -177,6 +177,12 @@
                 "description": "Upload an image for the hub page. If empty it will use the publication cover image.",
                 "group": "homepage"
             },
+            "title_for_recent_posts": {
+                "type": "text",
+                "default": "Recent posts",
+                "description": "Here you can set the title for the recent posts section in the hub.",
+                "group": "homepage"
+            },
             "bluesky_profile": {
                 "type": "text",
                 "description": "Enter your Bluesky profile URL for the hub page",

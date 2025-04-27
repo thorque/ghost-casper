@@ -33,8 +33,6 @@ production stylesheet in assets/built/screen.css
 @import "social-media-card.css";
 
 :root {
-
-    /* Colours */
     --color-green: #a4d037;
     --color-yellow: #fecd35;
     --color-red: #f05230;
@@ -48,20 +46,26 @@ production stylesheet in assets/built/screen.css
 
     --img-form-shadow: 0 2px 10px rgba(0,0,0,0.1);
 
-    /*
-    An accent color is also set by Ghost itself in
-    Ghost Admin > Settings > Brand
-
-    --ghost-accent-color: {value};
-
-    You can use this variable throughout your styles
-     */
+    /* --ghost-accent-color: {value}; */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --img-form-shadow: 0 2px 10px rgba(255,255,255,0.1);
     }
+
+    .gh-content a, .article-header a {
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+}
+
+html.dark-mode {
+    --img-form-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+html.dark-mode .gh-content a, 
+html.dark-mode .article-header a {
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 
   .nav-{
@@ -77,7 +81,7 @@ production stylesheet in assets/built/screen.css
   
   .gh-head{
     background-color: var(--ghost-accent-color) !important;
-    opacity: 0.8 !important;
+    opacity: 0.95 !important;
     margin: 20px !important;
     border-radius: 5px !important;
     position: fixed !important;
@@ -121,7 +125,7 @@ production stylesheet in assets/built/screen.css
     box-shadow: var(--img-form-shadow);
   }
 
-  .article-image img, .site-logo, .site-header-cover, .gh-hub-logo {
+  .article-image img, .site-logo, .site-header-cover, .gh-hub-logo, .gh-head-logo img {
     border-radius: 0;
     box-shadow: none;
   }
@@ -153,31 +157,46 @@ production stylesheet in assets/built/screen.css
     --cc-btn-primary-bg: var(--ghost-accent-color);
     --cc-btn-primary-border-color: var(--ghost-accent-color);
     --cc-btn-primary-color: #fff;
-    --cc-btn-primary-hover-bg: #FF1A75e6;
-    --cc-btn-primary-hover-border-color: #FF1A75e6;
+    --cc-btn-primary-hover-bg: color-mix(in srgb, var(--ghost-accent-color), white 10%);
+    --cc-btn-primary-hover-border-color: color-mix(in srgb, var(--ghost-accent-color), white 10%);
     --cc-btn-primary-hover-color: #fff;
     --cc-toggle-on-bg: var(--cc-btn-primary-bg);
 }
 
-.gh-content a, .article-header a {
-    text-decoration: none !important;
-    color: var(--ghost-accent-color) !important;
+.gh-content a:not(:has(img)), .article-header1 a {
+    text-decoration: underline dashed !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 6px !important;
     position: relative;
     display: inline-block;
 }
 
-.gh-content a::after, .site-footer a::after {
+.article-header a, .post-card-title, .site-footer a, nav a, .gh-head-link {
+    text-decoration: none !important;
+    position: relative;
+    display: inline-block;
+}
+
+.gh-content a::after, .article-header a::after, .post-card-title::after, nav a::after, 
+.gh-head-link::after, .site-footer a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     background-color: currentColor;
     transition: width 0.3s ease;
+    text-decoration: none;
 }
   
-.gh-content a:hover::after, .site-footer a:hover::after {
+.gh-content a:hover, .article-header a:hover, .post-card-title:hover, nav a:hover, 
+.gh-head-link:hover, .site-footer a:hover {
+    text-decoration: none !important;
+}
+
+.gh-content a:hover::after, .article-header a:hover::after, .post-card-title:hover::after,
+nav a:hover::after, .gh-head-link:hover::after, .site-footer a:hover::after {
     width: 100%;
 }
 
@@ -1169,7 +1188,7 @@ production stylesheet in assets/built/screen.css
     margin-top: 12px;
     padding: 0;
     font-size: 1.3rem;
-    color: var(--color-secondary-text);
+    color: color-mix(in srgb, var(--color-darkgrey), white 10%);
 }
 
 .post-card-meta > * {
@@ -1947,7 +1966,7 @@ iframe.instagram-media + script + :not([id]) {
     max-width: 500px;
     padding: 5px 5px 5px 15px;
     font-size: 1.7rem;
-    color: var(--color-secondary-text);
+    color: var(--color-darkgrey);
     background: #fff;
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -2315,7 +2334,7 @@ html.dark-mode .post-card-image {
 }
 
 html.dark-mode :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
-    color: color-mod(var(--color-secondary-text) l(-22%));
+    color: color-mix(in srgb, var(--color-secondary-text), white 10%);
 }
 
 html.dark-mode .post-card-featured {
@@ -2509,7 +2528,7 @@ html.dark-mode .footer-cta-title {
     }
 
     html.auto-color :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content, .pagination .page-number) {
-        color: color-mod(var(--color-secondary-text) l(-22%));
+        color: color-mix(in srgb, var(--color-secondary-text), white 10%);
     }
 
     html.auto-color .post-card-featured {

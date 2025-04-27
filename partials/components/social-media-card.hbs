@@ -2,79 +2,100 @@
 
 <div class="gh-hub-social-links">
   {{#if @custom.instagram_profile}}
-    <a href="{{@custom.instagram_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon instagram">
-        <div class="social-icon-letter">IG</div>
+    <a href="{{@custom.instagram_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf Instagram"
+       title="{{@site.title}} @ Instagram">
+      <div class="social-icon instagram">
+        {{> "icons/instagram"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">Instagram</div>
-      </div>
+      <span class="sr-only">Instagram</span>
     </a>
   {{/if}}
   
   {{#if @custom.bluesky_profile}}
-    <a href="{{@custom.bluesky_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon bluesky">
-        <div class="social-icon-letter">BS</div>
+    <a href="{{@custom.bluesky_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf Bluesky"
+       title="{{@site.title}} @ Bluesky">
+      <div class="social-icon bluesky">
+        {{> "icons/bluesky"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">Bluesky</div>
-      </div>
+      <span class="sr-only">Bluesky</span>
     </a>
   {{/if}}
   
   {{#if @custom.mastodon_profile}}
-    <a href="{{@custom.mastodon_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon mastodon">
-        <div class="social-icon-letter">M</div>
+    <a href="{{@custom.mastodon_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf Mastodon"
+       title="{{@site.title}} @ Mastodon">
+      <div class="social-icon mastodon">
+        {{> "icons/mastodon"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">Mastodon</div>
-      </div>
+      <span class="sr-only">Mastodon</span>
     </a>
   {{/if}}
   
   {{#if @custom.medium_profile}}
-    <a href="{{@custom.medium_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon medium">
-        <div class="social-icon-letter">M</div>
+    <a href="{{@custom.medium_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf Medium"
+       title="{{@site.title}} @ Medium">
+      <div class="social-icon medium">
+        {{> "icons/medium"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">Medium</div>
-      </div>
+      <span class="sr-only">Medium</span>
     </a>
   {{/if}}
   
   {{#if @custom.facebook_profile}}
-    <a href="{{@custom.facebook_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon facebook">
-        <div class="social-icon-letter">FB</div>
+    <a href="{{@custom.facebook_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf Facebook"
+       title="{{@site.title}} @ Facebook">
+      <div class="social-icon facebook">
+        {{> "icons/facebook"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">Facebook</div>
-      </div>
+      <span class="sr-only">Facebook</span>
     </a>
   {{/if}}
   
   {{#if @custom.tiktok_profile}}
-    <a href="{{@custom.tiktok_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon tiktok">
-        <div class="social-icon-letter">TT</div>
+    <a href="{{@custom.tiktok_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf TikTok"
+       title="{{@site.title}} @ TikTok">
+      <div class="social-icon tiktok">
+        {{> "icons/tiktok"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">TikTok</div>
-      </div>
+      <span class="sr-only">TikTok</span>
     </a>
   {{/if}}
   
   {{#if @custom.x_profile}}
-    <a href="{{@custom.x_profile}}" target="_blank" rel="noopener" class="social-card">
-      <div class="social-card-icon twitter">
-        <div class="social-icon-letter">X</div>
+    <a href="{{@custom.x_profile}}" 
+       target="_blank" 
+       rel="noopener" 
+       class="social-icon-link" 
+       aria-label="{{@site.title}} auf X/Twitter"
+       title="{{@site.title}} @ X/Twitter">
+      <div class="social-icon twitter">
+        {{> "icons/x"}}
       </div>
-      <div class="social-card-content">
-        <div class="social-card-title">X/Twitter</div>
-      </div>
+      <span class="sr-only">X/Twitter</span>
     </a>
   {{/if}}
 </div>

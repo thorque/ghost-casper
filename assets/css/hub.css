@@ -15,7 +15,6 @@
   padding: 60px 0 20px;
 }
 
-/* Wenn kein Bild vorhanden ist */
 .gh-hub-header.no-image .gh-hub-header-content {
   flex: 1 1 100%;
   max-width: 100%;
@@ -28,22 +27,21 @@
 }
 
 .gh-hub-logo {
-  width: 80px;
-  height: auto;
+  height: 80px;
+  width: auto;
   margin-bottom: 20px;
-  display: block; /* Wichtig für die Zentrierung */
+  display: block;
 }
 
 .gh-hub-title {
-  font-size: 4.2rem;
+  font-size: 4.2rem !important;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .gh-hub-description {
-  font-size: 1.8rem;
-  color: #666;
   margin-bottom: 2rem;
+  max-width: unset !important;
 }
 
 .gh-hub-header-image {
@@ -55,6 +53,7 @@
   width: 100%;
   height: auto;
   border-radius: 12px;
+  margin-top: 120px;
   object-fit: cover;
 }
 
@@ -66,8 +65,18 @@
   padding: 0 !important;
 }
 
+html.dark-mode .gh-hub-section-title {
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gh-hub-section-title {
+    color: #fff;
+  }
+}
+
 /* Responsive Anpassungen */
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .gh-hub-header {
       flex-direction: column-reverse;
       padding: 40px 0;
@@ -80,8 +89,8 @@
   }
   
   .gh-hub-logo {
-      margin-left: auto; /* Diese beiden Zeilen sorgen */
-      margin-right: auto; /* für die Zentrierung des Logos */
+      margin-left: auto;
+      margin-right: auto;
   }
   
   .gh-hub-title {
