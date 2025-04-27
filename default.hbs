@@ -113,6 +113,15 @@ $(document).ready(function () {
     });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
+
+    const divs = document.querySelectorAll('.kg-product-card-container');
+    for (const div of divs) {
+      const images = div.querySelectorAll('img');
+      const titles = div.querySelectorAll('h4');
+      for (var i = 0; i < images.length; i++) {
+        images[i].alt = titles[i].textContent;
+      }
+    }
 });
 </script>
 
