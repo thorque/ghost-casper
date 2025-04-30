@@ -522,13 +522,13 @@ a.kg-cta-button{
     grid-template-columns: auto 1fr auto;
 }
 
-.is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-logo {
+/*.is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-logo {
     display: none;
 }
 
 .is-head-left-logo.home-template .gh-head:not(.is-header-hidden) .gh-head-menu {
     margin-left: -40px;
-}
+}*/
 
 @media (min-width: 992px) {
     .is-head-left-logo .gh-head-menu {
@@ -2561,7 +2561,7 @@ html.dark-mode .footer-cta-title {
         background: var(--color-darkmode);
     }
 
-    html.auto-color img {
+    html.auto-color img1 {
         opacity: 0.9;
     }
 

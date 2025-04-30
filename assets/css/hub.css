@@ -104,8 +104,9 @@ html.dark-mode .gh-hub-section-title {
   }
   
   .gh-hub-header-image img {
-      max-height: 300px;
-      object-position: center;
+    margin-top: 0px;
+    max-height: 300px;
+    object-position: center;
   }
 }
 
@@ -128,6 +129,7 @@ html.dark-mode .gh-hub-section-title {
   }
   
   .gh-hub-header-image img {
-      max-height: 200px;
+    margin-top: 0px;
+    max-height: 200px;
   }
 }
