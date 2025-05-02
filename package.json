@@ -117,6 +117,15 @@
                 ],
                 "default": "Noto Sans"
             },
+            "color_scheme": {
+                "type": "select",
+                "options": [
+                    "Light",
+                    "Dark",
+                    "Auto"
+                ],
+                "default": "Light"
+            },
             "show_publication_cover": {
                 "type": "boolean",
                 "default": true,
@@ -141,15 +150,6 @@
                 ],
                 "default": "Classic",
                 "group": "homepage"
-            },
-            "color_scheme": {
-                "type": "select",
-                "options": [
-                    "Light",
-                    "Dark",
-                    "Auto"
-                ],
-                "default": "Light"
             },
             "post_image_style": {
                 "type": "select",

@@ -201,7 +201,8 @@ nav a:hover::after, .gh-head-link:hover::after, figcaption a:hover::after, .site
 
 .gh-content a.kg-cta-button::after,
 .gh-content a.kg-button::after,
-.gh-content a.kg-header-card-button::after {
+.gh-content a.kg-header-card-button::after,
+footer .social-icon-link::after {
     content: none !important;
     display: none !important;
 }
@@ -2162,7 +2163,17 @@ iframe.instagram-media + script + :not([id]) {
 
 .author-profile-social-link {
     font-size: 1.3rem;
-    color: var(--color-secondary-text);
+    color: var(--color-dark-grey);
+}
+
+@media (prefers-color-scheme: dark) {
+    html.auto-color .author-profile-social-link {
+        color: hsla(0, 0%, 100%, .75) !important;
+    }
+}
+
+html.dark-mode .author-profile-social-link {
+    color: hsla(0, 0%, 100%, .75) !important;
 }
 
 .author-profile-social-link:hover {
@@ -2277,7 +2288,7 @@ iframe.instagram-media + script + :not([id]) {
     padding-top: 48px;
     padding-bottom: 140px;
     color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    background: var(--ghost-accent-color); /*color-mod(var(--color-darkgrey) l(-5%));*/
 }
 
 .page-template .site-footer {
@@ -2287,8 +2298,7 @@ iframe.instagram-media + script + :not([id]) {
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: auto 1fr auto;
-    color: rgba(255,255,255,0.7);
+    grid-template-columns: repeat(3, 1fr);
     font-size: 1.3rem;
 }
 
@@ -2298,9 +2308,6 @@ iframe.instagram-media + script + :not([id]) {
     font-weight: 500;
 }
 
-.site-footer a {
-    color: rgba(255,255,255,0.7);
-}
 
 .site-footer a:hover {
     color: rgba(255,255,255,1);
@@ -2311,9 +2318,12 @@ iframe.instagram-media + script + :not([id]) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
     margin: 0 0 20px;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .site-footer-nav li {
@@ -2325,13 +2335,14 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer-nav a {
+    color: #fff;
     position: relative;
     display: inline-flex;
     align-items: center;
     margin-left: 10px;
 }
 
-.site-footer-nav li:not(:first-child) a:before {
+.site-footer-nav li1:not(:first-child) a:before {
     content: "";
     display: block;
     width: 2px;
