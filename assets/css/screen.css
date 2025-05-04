@@ -233,6 +233,7 @@ a.kg-cta-button {
 
 .kg-product-card-container{
     font-family: var(--gh-font-body) !important;
+    max-width: unset !important;
 }
 
 .kg-header-card a.kg-header-card-button{
